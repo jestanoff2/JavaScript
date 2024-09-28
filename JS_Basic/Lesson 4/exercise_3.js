@@ -6,3 +6,4 @@ function Depositcalculator(depositedSum, depositperiod, annualInterestPercent){
 }
 Depositcalculator(200,3,5.7);
 console.log('huiih   ');
+console.log('huiih22222   ');
