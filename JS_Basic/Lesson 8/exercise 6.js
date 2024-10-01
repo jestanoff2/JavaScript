@@ -38,4 +38,4 @@ function calculate(N1, N2, operator) {
 
     console.log(output);
 }
-calculate(10,12 ,"+")
+calculate(10, 12, "+")

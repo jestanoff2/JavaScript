@@ -1,4 +1,4 @@
-function basketballEquipment(annualtraingFee){
+function basketballEquipment(annualtraingFee) {
     let sneakerPrice = 0.6 * annualtraingFee;
     let outfitPrice = 0.8 * sneakerPrice;
     let ballPrice = (1 / 4) * outfitPrice;

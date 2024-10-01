@@ -1,4 +1,4 @@
-function Journey(budget, season){
+function Journey(budget, season) {
     let destination;
     let spent;
     let accommodation;

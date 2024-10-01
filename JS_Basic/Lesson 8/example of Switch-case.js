@@ -1,19 +1,19 @@
-function fruitsOrVegies (food){
-    switch (food){
+function fruitsOrVegies(food) {
+    switch (food) {
         case "banana":
         case "apple":
         case "kiwi":
         case "Cherry":
         case "lemon":
         case "grapes":
-        console.log ("Fruits"); break;
+            console.log("Fruits"); break;
         case "tomato":
         case "cucumber":
         case "pepper":
         case "carot":
-        console.log ("vegtebles"); break;
+            console.log("vegtebles"); break;
         default:
-        console.log ("error");
+            console.log("error");
     }
 }
 fruitsOrVegies("grapes")

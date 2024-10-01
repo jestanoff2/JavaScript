@@ -1,14 +1,14 @@
-function outfitChoice(degrees, partOfDay){
+function outfitChoice(degrees, partOfDay) {
     let outfit = '';
     let shoes = '';
 
-    switch (partOfDay){
+    switch (partOfDay) {
         case 'Morning':
 
-            if (degrees >= 10 && degrees <= 18){
+            if (degrees >= 10 && degrees <= 18) {
                 outfit = 'Sweatshirt';
                 shoes = 'Sneakers';
-            } else if (degrees <= 24){
+            } else if (degrees <= 24) {
                 outfit = 'Shirt';
                 shoes = 'Moccasins';
             } else {
@@ -18,7 +18,7 @@ function outfitChoice(degrees, partOfDay){
 
             break;
 
-            case 'Afternoon':
+        case 'Afternoon':
             if (degrees >= 10 && degrees <= 18) {
                 outfit = 'Shirt';
                 shoes = 'Moccasins';
@@ -38,6 +38,6 @@ function outfitChoice(degrees, partOfDay){
             break;
     }
 
-    console.log (`It's ${degrees} degrees, get your ${outfit} and ${shoes}.`);
+    console.log(`It's ${degrees} degrees, get your ${outfit} and ${shoes}.`);
 }
 outfitChoice(16, "Morning");

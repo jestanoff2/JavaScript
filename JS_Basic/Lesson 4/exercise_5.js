@@ -1,4 +1,4 @@
-function SchoolSuplies(PenPacket, Markerpacket, Soap, discount,){
+function SchoolSuplies(PenPacket, Markerpacket, Soap, discount,) {
     let supliesPrice = PenPacket * 5.80 + Markerpacket * 7.20 + Soap * 1.20;
     let discountDecimal = discount / 100;
     let discountSum = discountDecimal * supliesPrice;
