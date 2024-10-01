@@ -5,3 +5,5 @@ function Depositcalculator(depositedSum, depositperiod, annualInterestPercent){
     console.log(sum);
 }
 Depositcalculator(200,3,5.7);
+
+
