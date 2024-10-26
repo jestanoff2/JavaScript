@@ -8,16 +8,16 @@ function HighJump(input) {
     while (true) {
         currentJump = Number(input[index++]);
         if (currentJump > barHeight) {
-            if (currentJump > expectedJump) {
+            if (barHeight >= expectedJump) {
                 succeeded = true;
                 break;
             }
             barHeight += 5;
             failCount = 0;
-            continue;
-        }
-        if ((++failCount) == 3) {
-            break;
+        } else {
+            if ((++failCount) === 3) {
+                break;
+            }
         }
     }
     if (succeeded) {
