@@ -1,0 +1,25 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        var input = Console.ReadLine().Split();
+        int n = int.Parse(input[0]), k = int.Parse(input[1]);
+
+        long Fact(int x)
+        {
+            long f = 1;
+            for (int i = 2; i <= x; i++) f *= i;
+            return f;
+        }
+
+        Console.WriteLine("Пермутации: " + Fact(n));
+        Console.WriteLine("Вариации: " + (k > n ? 0 : Fact(n) / Fact(n - k)));
+        Console.WriteLine("Комбинации: " + (k > n ? 0 : Fact(n) / (Fact(k) * Fact(n - k))));
+    }
+}
+
+
+
+
