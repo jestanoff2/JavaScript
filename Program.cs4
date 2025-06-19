@@ -1,0 +1,45 @@
+﻿using System;
+using System.Linq;
+using System.Numerics;
+
+class Program
+{
+    static void Main()
+    {
+        var coeffs = Console.ReadLine().Split().Select(double.Parse).ToArray();
+        int deg = coeffs.Length - 1;
+
+        if (deg == 1)
+        {
+            Console.WriteLine($"x = {-coeffs[1] / coeffs[0]}");
+        }
+        else if (deg == 2)
+        {
+            double a = coeffs[0], b = coeffs[1], c = coeffs[2], d = b * b - 4 * a * c;
+            if (d >= 0)
+                Console.WriteLine($"x1 = {(-b + Math.Sqrt(d)) / (2 * a)}, x2 = {(-b - Math.Sqrt(d)) / (2 * a)}");
+            else
+                Console.WriteLine("Комплексни корени");
+        }
+        else if (deg == 3)
+        {
+            var r = FindCubicRoots(coeffs);
+            foreach (var x in r) Console.WriteLine($"x = {x}");
+        }
+        else Console.WriteLine("Степента е твърде висока");
+    }
+
+    static Complex[] FindCubicRoots(double[] c)
+    {
+        double a = c[0], b = c[1], d = c[2], e = c[3];
+        b /= a; d /= a; e /= a;
+        double p = d - b * b / 3, q = 2 * Math.Pow(b, 3) / 27 - b * d / 3 + e;
+        var D = Complex.Pow(q / 2, 2) + Complex.Pow(p / 3, 3);
+        var u = Complex.Pow(-q / 2 + Complex.Sqrt(D), 1.0 / 3);
+        var v = Complex.Pow(-q / 2 - Complex.Sqrt(D), 1.0 / 3);
+        var w = new Complex(-0.5, Math.Sqrt(3) / 2);
+        return new[] { u + v, u * w + v * Complex.Conjugate(w), u * Complex.Conjugate(w) + v * w }.Select(x => x - b / 3).ToArray();
+    }
+}
+
+
