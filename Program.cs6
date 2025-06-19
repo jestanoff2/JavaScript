@@ -1,0 +1,20 @@
+﻿using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        var A = Console.ReadLine().Split().Select(int.Parse).ToHashSet();
+        var B = Console.ReadLine().Split().Select(int.Parse).ToHashSet();
+
+        Console.WriteLine("Сечение: " + string.Join(" ", A.Intersect(B)));
+        Console.WriteLine("Обединение: " + string.Join(" ", A.Union(B)));
+        Console.WriteLine("Разлика A\\B: " + string.Join(" ", A.Except(B)));
+        Console.WriteLine("Допълнение B\\A: " + string.Join(" ", B.Except(A)));
+    }
+}
+
+
+
+
