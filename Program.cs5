@@ -1,0 +1,23 @@
+﻿using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+        double minLen = double.MaxValue;
+
+        for (int i = 0; i < n; i++)
+        {
+            var v = Console.ReadLine().Split().Select(double.Parse).ToArray();
+            double len = Math.Sqrt(v[0]*v[0] + v[1]*v[1] + v[2]*v[2]);
+            if (len < minLen) minLen = len;
+        }
+
+        Console.WriteLine($"Най-късата дължина: {minLen}");
+    }
+}
+
+
+
